@@ -1,3 +1,4 @@
+.....
 # This package loads all the non-GUI Slic3r perl packages.
 
 package Slic3r;
@@ -61,7 +62,7 @@ use constant SCALING_FACTOR         => 0.000001;
 $Slic3r::loglevel = (defined($ENV{'SLIC3R_LOGLEVEL'}) && $ENV{'SLIC3R_LOGLEVEL'} =~ /^[1-9]/) ? $ENV{'SLIC3R_LOGLEVEL'} : 0;
 set_logging_level($Slic3r::loglevel);
 
-# Let the palceholder parser evaluate one expression to initialize its local static macro_processor 
+# Let the palceholder parser evaluate one expression to initialize its local static macro_processor
 # class instance in a thread safe manner.
 Slic3r::GCode::PlaceholderParser->new->evaluate_boolean_expression('1==1');
 
@@ -116,7 +117,7 @@ sub system_info
 
     my $out = '';
     $out .= "$tag{bstart}Operating System:    $tag{bend}$Config{osname}$tag{eol}";
-    $out .= "$tag{bstart}System Architecture: $tag{bend}$Config{archname}$tag{eol}";        
+    $out .= "$tag{bstart}System Architecture: $tag{bend}$Config{archname}$tag{eol}";
     if ($^O eq 'MSWin32') {
         $out .= "$tag{bstart}Windows Version: $tag{bend}" . `ver` . $tag{eol};
     } else {
